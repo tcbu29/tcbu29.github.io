@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Teaching Fee</title>
+        <link href="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/style.min.css" rel="stylesheet" />
+        <link href="css/styles.css" rel="stylesheet" />
+        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+    </head>
+    <body class="sb-nav-fixed">
+        <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
+            <!-- Navbar Brand-->
+            <a class="navbar-brand ps-3" href="index.html">Teaching Fee</a>
+            <!-- Sidebar Toggle-->
+            <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
+            <!-- Navbar Search-->
+            <!--<form class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
+                <div class="input-group">
+                    <input class="form-control" type="text" placeholder="Search for..." aria-label="Search for..." aria-describedby="btnNavbarSearch" />
+                    <button class="btn btn-primary" id="btnNavbarSearch" type="button"><i class="fas fa-search"></i></button>
+                </div>
+            </form>-->
+            <!-- Navbar-->
+            <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">d
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="#!">Settings</a></li>
+                        <li><a class="dropdown-item" href="#!">Activity Log</a></li>
+                        <li><hr class="dropdown-divider" /></li>
+                        <li><a class="dropdown-item" href="#!">Logout</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <div id="layoutSidenav">
+            <div id="layoutSidenav_nav">
+                <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
+                    <div class="sb-sidenav-menu">
+                        <div class="nav">
+                            
+
+                            <!--<div class="sb-sidenav-menu-heading">Interface</div>
+                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
+                                <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
+                                Layouts
+                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                            </a>
+                            <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                                <nav class="sb-sidenav-menu-nested nav">
+                                    <a class="nav-link" href="layout-static.html">Static Navigation</a>
+                                    <a class="nav-link" href="layout-sidenav-light.html">Light Sidenav</a>
+                                </nav>
+                            </div>-->
+
+                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
+                                <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
+                                หน้า
+                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                            </a>
+                            <div class="collapse" id="collapsePages" aria-labelledby="headingTwo" data-bs-parent="#sidenavAccordion">
+                                <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
+
+                                    <!--<a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#pagesCollapseAuth" aria-expanded="false" aria-controls="pagesCollapseAuth">
+                                        Authentication
+                                        <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                                    </a>
+                                    <div class="collapse" id="pagesCollapseAuth" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordionPages">
+                                        <nav class="sb-sidenav-menu-nested nav">
+                                            <a class="nav-link" href="login.html">Login</a>
+                                            <a class="nav-link" href="register.html">Register</a>
+                                            <a class="nav-link" href="password.html">Forgot Password</a>
+                                        </nav>
+                                    </div>
+                                    <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#pagesCollapseError" aria-expanded="false" aria-controls="pagesCollapseError">
+                                        Error
+                                        <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                                    </a>
+                                    <div class="collapse" id="pagesCollapseError" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordionPages">
+                                        <nav class="sb-sidenav-menu-nested nav">
+                                            <a class="nav-link" href="401.html">401 Page</a>
+                                            <a class="nav-link" href="404.html">404 Page</a>
+                                            <a class="nav-link" href="500.html">500 Page</a>
+                                        </nav>
+                                    </div>-->
+
+                                    <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#pagesCollapseMaster" aria-expanded="false" aria-controls="pagesCollapseMaster">
+                                          ตั้งค่า
+                                        <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                                    </a>
+                                    <div class="collapse" id="pagesCollapseMaster" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordionPages">
+                                        <nav class="sb-sidenav-menu-nested nav">
+                                            <a class="nav-link" href="master01.html">ปีการศึกษา</a>
+                                            <a class="nav-link" href="master02.html">เทอมการศึกษา</a>
+                                            <a class="nav-link" href="master03.html">วิชา</a>
+                                            <a class="nav-link" href="master04.html">ตารางภาคการศึกษา</a>
+                                            <a class="nav-link" href="master05.html">ประเภทนิสิต</a>
+                                            <a class="nav-link" href="master06.html">ประเภทการสอน</a>
+                                            <a class="nav-link" href="master07.html">ค่าสอน</a>
+                                            <a class="nav-link" href="master08.html">ค่าเดินทาง</a>
+                                            <a class="nav-link" href="master09.html">ค่าแพทย์</a>
+                                        </nav>
+                                    </div>
+
+                                </nav>
+                            </div>
+                            <!--<div class="sb-sidenav-menu-heading">Addons</div>
+                            <a class="nav-link" href="charts.html">
+                                <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
+                                Charts
+                            </a>
+                            <a class="nav-link" href="tables.html">
+                                <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
+                                
+                            </a>-->
+                            <div class="sb-sidenav-menu-heading">Core</div>
+                            <a class="nav-link active" href="TeachingSchedule.html">
+                                <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                                ตารางสอน
+                            </a>
+                            <a class="nav-link" href="TeachingProgram.html">
+                                <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                                รายการสอน
+                            </a>
+                            <a class="nav-link" href="CollectionTeachingFees.html">
+                                <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                                ประมวลค่าสอน
+                            </a>
+                            <a class="nav-link" href="EditTuitionFees.html">
+                                <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                                แก้ไขค่าสอน
+                            </a>
+                            <a class="nav-link" href="Reports.html">
+                                <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                                รายงาน
+                            </a>
+                        </div>
+                    </div>
+                    <div class="sb-sidenav-footer">
+                        <div class="small">Logged in as:</div>
+                        Teaching Fee
+                    </div>
+                </nav>
+            </div>
+            <div id="layoutSidenav_content" style=" ">
+                <main>
+                    <div class="container-fluid px-4">
+                        <h1 class="mt-4">ตารางสอน</h1>
+                        <ol class="breadcrumb mb-4">
+                            <li class="breadcrumb-item active">ตารางสอน</li>
+                        </ol>
+
+                        <div class="container-left border">
+                            <button type="button" class="btn btn-primary"  ><img src="assets/img/save-file.png" alt="" style="width:25px; height:25px;"/> บันทึก</button>
+                            <button type="button" class="btn btn-danger"  ><img src="assets/img/trash-bin.png" alt="" style="width:25px; height:25px;"/> ลบข้อมูล</button>
+                            <button type="button" class="btn btn-secondary"  ><img src="assets/img/import.png" alt="" style="width:25px; height:25px;"/> นำเข้า</button>
+                            <button type="button" class="btn btn-info"  ><img src="assets/img/play.png" alt="" style="width:25px; height:25px;"/> ใช้งาน</button>
+                            <button type="button" class="btn btn-warning"  ><img src="assets/img/stop-button.png" alt="" style="width:25px; height:25px;"/> ไม่ใช้งาน</button>   
+                            
+                            <select style=" width:100px; height:40px; border-radius: 5px; position: relative; top: 2px;">
+                                <option>ใช้งาน</option>
+                                <option>ไม่ใช้งาน</option>
+                            </select>
+                            <button type="button" class="btn btn-light"><img src="assets/img/selection.png" alt="" style="width:25px; height:25px;"/>  เลือกทั้งหมด</button>
+                            <button type="button" class="btn btn-light"><img src="assets/img/un-selection.png" alt="" style="width:25px; height:25px;"/>  ไม่เลือกทั้งหมด</button>
+                            
+                        </div>
+
+                        <div>&nbsp;</div>
+
+                        <div class="mb-4" >
+                            <table style="padding-left:10px;">
+                                <tr>
+                                    <td align="right">ปีการศึกษา</td>
+                                    <td align="left">
+                                        <select style="width:100px;">
+                                            <option>2557</option>
+                                            <option>2558</option>
+                                            <option>2559</option>
+                                            <option>2560</option>
+                                            <option>2561</option>
+                                            <option>2562</option>
+                                            <option>2563</option>
+                                            <option>2564</option>
+                                            <option>2565</option>
+                                            <option>2566</option>
+                                            <option>2567</option>
+                                            <option>2568</option>
+                                            <option>2569</option>
+                                        </select>
+                                    </td>
+                                    <td align="right">ภาคเรียน</td>
+                                    <td align="left">
+                                        <select style="width:100px;">
+                                            <option></option>
+                                        </select>
+                                    </td>
+                                    <td align="right">ประเภทเทอม</td>
+                                    <td align="left">
+                                        <select style="width:100px;">
+                                            <option></option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="right" style="white-space:nowrap;">เลือกวิชา</td>
+                                    <td align="left" colspan="2">
+                                        <input type="text" class="datatable-input" style="width:270px;"/>
+                                    </td>
+                                    <td align="left" valign="middle" colspan="3" style=" ">                                        
+                                        <img src="assets/img/eye.png" alt="" style="width:25px; height:25px; cursor:pointer; background-color:Gray;"/>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="right" style="white-space:nowrap;">เลือกอาจารย์</td>
+                                    <td align="left" colspan="2">
+                                        <input type="text" class="datatable-input" style="width:270px;"/>
+                                    </td>
+                                    <td align="left" colspan="3">
+                                        <img src="assets/img/eye.png" alt="" style="width:25px; height:25px; cursor:pointer; background-color:Gray;"/>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td align="right">ประเภทนิสิต</td>
+                                    <td align="left">
+                                        <select style="width:100px;">
+                                            <option>D:ภาคปกติ</option>
+                                            <option>N:ภาคค่ำ</option>
+                                        </select>
+                                    </td>
+                                    <td align="right">ประเภทการสอน</td>
+                                    <td align="left">
+                                        <select style="width:100px;">
+                                            <option>CONT:CONT</option>
+                                            <option>CONV:CONV</option>
+                                            <option>IS:Indipendent Stud</option>
+                                            <option>L/C:CONV</option>
+                                            <option>L/S:L/S</option>
+                                            <option>LAB:LAB</option>
+                                            <option>LECT:LECT</option>
+                                            <option>PRAC:PRAC</option>
+                                            <option>R:READING</option>
+                                            <option>R/W:R/W</option>
+                                            <option>R/W/C:R/W/C</option>
+                                            <option>RwS:RWS</option>
+                                            <option>TU:TU</option>
+                                            <option>W:WRITING</option>
+                                        </select>
+                                    </td>
+                                    <td align="right">ประเภทการจ่าย</td>
+                                    <td align="left">
+                                        <select style="width:100px;">
+                                            <option>ค่าสอน</option>
+                                            <option>ค่าตรวจกระดาษคำตอบ</option>
+                                            <option>ค่าสอบประมวลความรู้</option>
+                                            <option>ค่าสอบวิทยานิพนธ์</option>
+                                        </select>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td align="right">จำนวนชั่วโมง / คาบ</td>
+                                    <td align="left">
+                                        <input type="text" class="datatable-input" style="width:100px;"/>
+                                    </td>
+                                    <td align="right">จำนวนคาบ / เทอม</td>
+                                    <td align="left">
+                                        <input type="text" class="datatable-input" style="width:100px;"/>
+                                    </td>
+                                    <td align="right">ค่าสอน (บาท/ชม.)</td>
+                                    <td align="left">
+                                        <input type="text" class="datatable-input" style="width:100px;"/>
+                                    </td>
+                                </tr>
+
+                            </table>
+                          <!--<div class="col-1">col-1</div>
+                          <div class="col-1">col-1</div>
+                          <div class="col-1">col-1</div>-->
+                        </div>
+
+                        <div class="card mb-4">
+                            <div class="card-header">
+                                <i class="fas fa-table me-1"></i>
+                                <!--DataTable Example-->
+                            </div>
+                            <div class="card-body">
+                                <table id="datatablesSimple">
+                                    <thead>
+                                        <tr>
+                                            <th>ลำดับ</th>
+                                            <th>&nbsp;</th>
+                                            <th>ประเภทเทอม</th>
+                                            <th>ปีการศึกษา</th>
+                                            <th>รหัสพนักงาน</th>
+                                            <th>ชื่อ - สกุล</th>
+                                            <th>ประเภทนิสิต</th>
+                                            <th>รหัสวิชา</th>
+                                            <th>ชื่อวิชา</th>
+                                            <th>ประเภทการสอน</th>
+                                            <th>จำนวน ชั่วโมง/คาบ</th>
+                                            <th>จำนวน ครั้ง/เทอม</th>
+                                            <th>ค่าสอน (บาท / ชั่วโมง)</th>
+                                        </tr>
+                                    </thead>
+                                        <tr><td>	1	</td><td>	<input type="checkbox" />	</td><td>	ภาค 1 ปริญญาตรี </td><td> 2566	</td><td>	Z66118	</td><td>	ศนิษา สุถังกรกาญ... 	</td><td>	ภาคปกติ	</td><td>	FD402	</td><td>	FD402 : Pers.	</td><td>	PRAC	</td><td>	1	</td><td>	4	</td><td>	650	</td></tr>
+                                            <tr><td>	2	</td><td>	<input type="checkbox" />	</td><td>	ภาค 1 ปริญญาตรี </td><td> 2566	</td><td>	Z66119	</td><td>	พรรณรวิ พิศาภาคย์ 	</td><td>	ภาคปกติ	</td><td>	GE104	</td><td>	GE104 : Aest...	</td><td>	LECT	</td><td>	6	</td><td>	14	</td><td>	650	</td></tr>
+                                            <tr><td>	3	</td><td>	<input type="checkbox" />	</td><td>	ภาค 1 ปริญญาตรี </td><td> 2566	</td><td>	Z66120	</td><td>	เศรษฐพล แย้มสวั...	</td><td>	ภาคปกติ	</td><td>	ADF103	</td><td>	ADF103 :Prin..	</td><td>	PRAC	</td><td>	8	</td><td>	14	</td><td>	650	</td></tr>
+                                            <tr><td>	4	</td><td>	<input type="checkbox" />	</td><td>	ภาค 1 ปริญญาตรี </td><td> 2566	</td><td>	A66111	</td><td>	ศิริพัฒณ์ กล่ำกลิ่น 	</td><td>	ภาคปกติ	</td><td>	CA032	</td><td>	CA032 : Busin...	</td><td>	LECT	</td><td>	18	</td><td>	14	</td><td>	650	</td></tr>
+                                            <tr><td>	5	</td><td>	<input type="checkbox" />	</td><td>	ภาค 1 ปริญญาตรี </td><td> 2566	</td><td>	Z66123	</td><td>	อนกุล รัตสำโพง 	</td><td>	ภาคปกติ	</td><td>	GE103	</td><td>	GE103: Tech...	</td><td>	LECT	</td><td>	12	</td><td>	14	</td><td>	700	</td></tr>
+                                            <tr><td>	6	</td><td>	<input type="checkbox" />	</td><td>	ภาค 1 ปริญญาตรี </td><td> 2566	</td><td>	Z66124	</td><td>	เมธวิน กิติดณ 	</td><td>	ภาคปกติ	</td><td>	CA032	</td><td>	CA032 :Busin...	</td><td>	LECT	</td><td>	9	</td><td>	14	</td><td>	700	</td></tr>
+                                            <tr><td>	7	</td><td>	<input type="checkbox" />	</td><td>	ภาค 1 ปริญญาตรี </td><td> 2566	</td><td>	Z66125	</td><td>	คเชนท์ พุทธิวราวุธ 	</td><td>	ภาคปกติ	</td><td>	Gl498	</td><td>	GI498 : Industr...	</td><td>	LAB	</td><td>	6	</td><td>	14	</td><td>	850	</td></tr>
+                                            <tr><td>	8	</td><td>	<input type="checkbox" />	</td><td>	ภาด 1 ปริญญาตรี </td><td> 2566	</td><td>	Z90055	</td><td>	อาณัติ เรืองวงศ์ 	</td><td>	ภาคปกติ	</td><td>	G1381	</td><td>	GI381 : Esport...	</td><td>	LECT	</td><td>	12	</td><td>	65	</td><td>	850	</td></tr>
+                                            <tr><td>	9	</td><td>	<input type="checkbox" />	</td><td>	ภาค 1 ปริญญาตรี </td><td> 2566	</td><td>	Z90204	</td><td>	ชยพล ทองน้อย 	</td><td>	ภาคปกติ	</td><td>	FD401	</td><td>	FD401 : Fashi...	</td><td>	PRAC	</td><td>	6	</td><td>	23	</td><td>	650	</td></tr>
+                                            <tr><td>	10	</td><td>	<input type="checkbox" />	</td><td>	ภาค 1 ปริญญาตรี </td><td> 2566	</td><td>	Z90205	</td><td>	กานสนิพัทธ์ สนั่น.. 	</td><td>	ภาคปกติ	</td><td>	FD401	</td><td>	FD401 : Fashi...	</td><td>	PRAC	</td><td>	10	</td><td>	15	</td><td>	650	</td></tr>
+                                            <tr><td>	11	</td><td>	<input type="checkbox" />	</td><td>	ภาค 1 ปริญญาตรี </td><td> 2566	</td><td>	Z90209	</td><td>	ติสทัด เลิศพิเชฐ 	</td><td>	ภาคปกติ	</td><td>	AC444	</td><td>	AC444 : Semi..	</td><td>	LECT	</td><td>	6	</td><td>	14	</td><td>	650	</td></tr>
+                                            <tr><td>	12	</td><td>	<input type="checkbox" />	</td><td>	ภาค 1 ปริญญาตรี </td><td> 2566	</td><td>	Z90271	</td><td>	ชยพล ขอดคำ 	</td><td>	ภาคปกติ	</td><td>	GI342	</td><td>	GI342 : Game...	</td><td>	LAB	</td><td>	6	</td><td>	14	</td><td>	850	</td></tr>
+                                            <tr><td>	13	</td><td>	<input type="checkbox" />	</td><td>	ภาค 1 ปริญญาตรี </td><td> 2566	</td><td>	Z90335	</td><td>	สิทธิกๆ ลิ้มทวีส่ง 	</td><td>	ภาคปกติ	</td><td>	Gl125	</td><td>	Gl125 : Introd..	</td><td>	LAB	</td><td>	18	</td><td>	14	</td><td>	850	</td></tr>
+                                            <tr><td>	14	</td><td>	<input type="checkbox" />	</td><td>	ภาค 1 ปริญญาตรี </td><td> 2566	</td><td>	Z90335	</td><td>	ลิทธิกร ลิ้มทวีส่ง 	</td><td>	ภาคปกติ	</td><td>	GI232	</td><td>	GI232 : Three..	</td><td>	LAB	</td><td>	16	</td><td>	32	</td><td>	850	</td></tr>
+                                            <tr><td>	15	</td><td>	<input type="checkbox" />	</td><td>	ภาค 1 ปริญญาตรี </td><td> 2566	</td><td>	Z90497	</td><td>	วิรินทร์ ชสิวิระางศ์ 	</td><td>	ภาคปกติ	</td><td>	FD401	</td><td>	FD401 : Fashi...	</td><td>	PRAC	</td><td>	3	</td><td>	14	</td><td>	650	</td></tr>
+                                            <tr><td>	16	</td><td>	<input type="checkbox" />	</td><td>	ภาค 1 ปริญญาตรี </td><td> 2566	</td><td>	Z90499	</td><td>	นิติกาญจน์ ธรรมส.. 	</td><td>	ภาคปกติ	</td><td>	FSD212	</td><td>	FSD212 : Fas...	</td><td>	PRAC	</td><td>	3	</td><td>	54	</td><td>	650	</td></tr>
+                                            <tr><td>	17	</td><td>	<input type="checkbox" />	</td><td>	ภาค 1 ปริญญาตรี </td><td> 2566	</td><td>	Z90500	</td><td>	ปวรุตม์ แสงลิทอง 	</td><td>	ภาคปกติ	</td><td>	FSD213	</td><td>	FSD213: Patt.	</td><td>	PRAC	</td><td>	12	</td><td>	15	</td><td>	650	</td></tr>
+                                            <tr><td>	18	</td><td>	<input type="checkbox" />	</td><td>	ภาค 1 ปริญญาตรี </td><td> 2566	</td><td>	Z90501	</td><td>	จ๊รายทธ จัยธรรม 	</td><td>	ภาคปกติ	</td><td>	DGM207	</td><td>	DGM207 : Intr...	</td><td>	LAB	</td><td>	6	</td><td>	14	</td><td>	800	</td></tr>
+                                            <tr><td>	19	</td><td>	<input type="checkbox" />	</td><td>	ภาค 1 ปริญญาตรี </td><td> 2566	</td><td>	Z90502	</td><td>	พิรุษห์ ฤทธิ์วัจน... 	</td><td>	ภาคปกติ	</td><td>	IT373	</td><td>	IT373 : User.	</td><td>	LECT	</td><td>	10	</td><td>	14	</td><td>	850	</td></tr>
+                                            <tr><td>	20	</td><td>	<input type="checkbox" />	</td><td>	ภาค 1 ปริญญาตรี </td><td> 2566	</td><td>	A66110	</td><td>	ศิริวัฒน์ คันทารส 	</td><td>	ภาคปกติ	</td><td>	CA033	</td><td>	CA033:Idea.	</td><td>	LECT	</td><td>	6	</td><td>	14	</td><td>	650	</td></tr>
+                                            <tr><td>	21	</td><td>	<input type="checkbox" />	</td><td>	ภาค 1 ปริญญาตรี </td><td> 2566	</td><td>	Z90504	</td><td>	ทิพย์ตะวัน อชัย 	</td><td>	ภาคปกติ	</td><td>	PFA271	</td><td>	PFA271: Acti...	</td><td>	PRAC	</td><td>	6	</td><td>	32	</td><td>	650	</td></tr>
+                                            <tr><td>	22	</td><td>	<input type="checkbox" />	</td><td>	ภาค 1 ปริญญาตรี </td><td> 2566	</td><td>	Z54209	</td><td>	วราธร วงศ์สว่างศิริ 	</td><td>	ภาคปกติ	</td><td>	LW321	</td><td>	LW321 : Law...	</td><td>	LECT	</td><td>	18	</td><td>	54	</td><td>	750	</td></tr>
+                                            <tr><td>	23	</td><td>	<input type="checkbox" />	</td><td>	ภาค 1 ปริญญาตรี </td><td> 2566	</td><td>	Z50286	</td><td>	อัมพรสักก์ อังคทะ.. 	</td><td>	ภาคปกติ	</td><td>	MI495	</td><td>	MI495 : Speci...	</td><td>	LECT	</td><td>	16	</td><td>	15	</td><td>	950	</td></tr>
+                                            <tr><td>	24	</td><td>	<input type="checkbox" />	</td><td>	ภาค 1 ปริญญาตรี </td><td> 2566	</td><td>	Z56089	</td><td>	รัชตะ จันทร์พาณิชย์	</td><td>	ภาคปกติ	</td><td>	ABM341	</td><td>	ABM341: Air ...	</td><td>	LECT	</td><td>	3	</td><td>	32	</td><td>	750	</td></tr>
+
+                                    <tbody>
+                                               
+
+
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+                <footer class="py-4 bg-light mt-auto">
+                    <div class="container-fluid px-4">
+                        <div class="d-flex align-items-center justify-content-between small">
+                            <div class="text-muted">Copyright &copy; Your Website 2023</div>
+                            <div>
+                                <a href="#">Privacy Policy</a>
+                                &middot;
+                                <a href="#">Terms &amp; Conditions</a>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+        <script src="js/scripts.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
+        <script src="assets/demo/chart-area-demo.js"></script>
+        <script src="assets/demo/chart-bar-demo.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/umd/simple-datatables.min.js" crossorigin="anonymous"></script>
+        <script src="js/datatables-simple-demo.js"></script>
+    </body>
+</html>

@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Teaching Fee</title>
+        <link href="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/style.min.css" rel="stylesheet" />
+        <link href="css/styles.css" rel="stylesheet" />
+        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+    </head>
+    <body class="sb-nav-fixed">
+        <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
+            <!-- Navbar Brand-->
+            <a class="navbar-brand ps-3" href="index.html">Teaching Fee</a>
+            <!-- Sidebar Toggle-->
+            <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
+            <!-- Navbar Search-->
+            <!--<form class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
+                <div class="input-group">
+                    <input class="form-control" type="text" placeholder="Search for..." aria-label="Search for..." aria-describedby="btnNavbarSearch" />
+                    <button class="btn btn-primary" id="btnNavbarSearch" type="button"><i class="fas fa-search"></i></button>
+                </div>
+            </form>-->
+            <!-- Navbar-->
+            <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="#!">Settings</a></li>
+                        <li><a class="dropdown-item" href="#!">Activity Log</a></li>
+                        <li><hr class="dropdown-divider" /></li>
+                        <li><a class="dropdown-item" href="#!">Logout</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <div id="layoutSidenav">
+            <div id="layoutSidenav_nav">
+                <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
+                    <div class="sb-sidenav-menu">
+                        <div class="nav">
+                            
+
+                            <!--<div class="sb-sidenav-menu-heading">Interface</div>
+                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
+                                <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
+                                Layouts
+                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                            </a>
+                            <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                                <nav class="sb-sidenav-menu-nested nav">
+                                    <a class="nav-link" href="layout-static.html">Static Navigation</a>
+                                    <a class="nav-link" href="layout-sidenav-light.html">Light Sidenav</a>
+                                </nav>
+                            </div>-->
+
+                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
+                                <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
+                                หน้า
+                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                            </a>
+                            <div class="collapse" id="collapsePages" aria-labelledby="headingTwo" data-bs-parent="#sidenavAccordion">
+                                <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
+
+                                    <!--<a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#pagesCollapseAuth" aria-expanded="false" aria-controls="pagesCollapseAuth">
+                                        Authentication
+                                        <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                                    </a>
+                                    <div class="collapse" id="pagesCollapseAuth" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordionPages">
+                                        <nav class="sb-sidenav-menu-nested nav">
+                                            <a class="nav-link" href="login.html">Login</a>
+                                            <a class="nav-link" href="register.html">Register</a>
+                                            <a class="nav-link" href="password.html">Forgot Password</a>
+                                        </nav>
+                                    </div>
+                                    <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#pagesCollapseError" aria-expanded="false" aria-controls="pagesCollapseError">
+                                        Error
+                                        <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                                    </a>
+                                    <div class="collapse" id="pagesCollapseError" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordionPages">
+                                        <nav class="sb-sidenav-menu-nested nav">
+                                            <a class="nav-link" href="401.html">401 Page</a>
+                                            <a class="nav-link" href="404.html">404 Page</a>
+                                            <a class="nav-link" href="500.html">500 Page</a>
+                                        </nav>
+                                    </div>-->
+
+                                    <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#pagesCollapseMaster" aria-expanded="false" aria-controls="pagesCollapseMaster">
+                                          ตั้งค่า
+                                        <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                                    </a>
+                                    <div class="collapse" id="pagesCollapseMaster" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordionPages">
+                                        <nav class="sb-sidenav-menu-nested nav">
+                                            <a class="nav-link" href="master01.html">ปีการศึกษา</a>
+                                            <a class="nav-link" href="master02.html">เทอมการศึกษา</a>
+                                            <a class="nav-link" href="master03.html">วิชา</a>
+                                            <a class="nav-link" href="master04.html">ตารางภาคการศึกษา</a>
+                                            <a class="nav-link" href="master05.html">ประเภทนิสิต</a>
+                                            <a class="nav-link" href="master06.html">ประเภทการสอน</a>
+                                            <a class="nav-link" href="master07.html">ค่าสอน</a>
+                                            <a class="nav-link" href="master08.html">ค่าเดินทาง</a>
+                                            <a class="nav-link" href="master09.html">ค่าแพทย์</a>
+                                        </nav>
+                                    </div>
+
+                                </nav>
+                            </div>
+                            <!--<div class="sb-sidenav-menu-heading">Addons</div>
+                            <a class="nav-link" href="charts.html">
+                                <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
+                                Charts
+                            </a>
+                            <a class="nav-link" href="tables.html">
+                                <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
+                                
+                            </a>-->
+                            <div class="sb-sidenav-menu-heading">Core</div>
+                            <a class="nav-link" href="TeachingSchedule.html">
+                                <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                                ตารางสอน
+                            </a>
+                            <a class="nav-link" href="TeachingProgram.html">
+                                <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                                รายการสอน
+                            </a>
+                            <a class="nav-link active" href="CollectionTeachingFees.html">
+                                <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                                ประมวลค่าสอน
+                            </a>
+                            <a class="nav-link" href="EditTuitionFees.html">
+                                <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                                แก้ไขค่าสอน
+                            </a>
+                            <a class="nav-link " href="Reports.html">
+                                <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                                รายงาน
+                            </a>
+                        </div>
+                    </div>
+                    <div class="sb-sidenav-footer">
+                        <div class="small">Logged in as:</div>
+                        Teaching Fee
+                    </div>
+                </nav>
+            </div>
+            <div id="layoutSidenav_content" style="">
+                <main>
+                    <div class="container-fluid px-4">
+                        <h1 class="mt-4">ประมวลค่าสอน</h1>
+                        <ol class="breadcrumb mb-4">
+                            <li class="breadcrumb-item active">ประมวลค่าสอน</li>
+                        </ol>
+                         
+                        <div class="container-left border">
+                            <button type="button" class="btn btn-primary" style="width:100px;"><img src="assets/img/save-file.png" alt="" style="width:25px; height:25px;"/> บันทึก</button>
+                            <button type="button" class="btn btn-danger" style="width:120px;"><img src="assets/img/trash-bin.png" alt="" style="width:25px; height:25px;"/> ลบข้อมูล</button>
+                             
+                             <select style=" width:120px; height:40px; border-radius: 5px; position: relative; top: 2px;">
+                                <option>ยังไม่ส่งจ่าย</option>
+                            </select>
+
+                            <button type="button" class="btn btn-light"><img src="assets/img/selection.png" alt="" style="width:25px; height:25px;"/>  เลือกทั้งหมด</button>
+                            <button type="button" class="btn btn-light"><img src="assets/img/un-selection.png" alt="" style="width:25px; height:25px;"/>  ไม่เลือกทั้งหมด</button>
+
+                            <button type="button" class="btn btn-light"><img src="assets/img/x.png" alt="" style="width:25px; height:25px;"/>  ยกเลิกการจ่าย</button>
+                        </div>
+
+                        <div>&nbsp;</div>
+
+                        <div class="row">
+                            <div class="col-xl-6">
+                                <div class="card mb-4">
+                                    <div class="card-header">
+                                        <i class="fas fa-chart-area me-1"></i>
+                                        เลือกรายการเพื่อคำนวณค่าสอน
+                                    </div>
+                                    <div class="card-body">
+                                        <table cellpadding="10" cellspacing="">
+                                            <tr>
+                                                <td align="right">ปี</td>
+                                                <td align="left">
+                                                    <select style="width:100px;">
+                                                        <option>2557</option>
+                                                        <option>2558</option>
+                                                        <option>2559</option>
+                                                        <option>2560</option>
+                                                        <option>2561</option>
+                                                        <option>2562</option>
+                                                        <option>2563</option>
+                                                        <option>2564</option>
+                                                        <option>2565</option>
+                                                        <option>2566</option>
+                                                        <option>2567</option>
+                                                        <option>2568</option>
+                                                        <option>2569</option>
+                                                    </select>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td align="right">เดือน</td>
+                                                <td align="left">
+                                                    <select style="width:150px;">
+                                                        <option></option>
+                                                    </select>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td align="right">ประเภทการจ่าย</td>
+                                                <td align="left">
+                                                    <select style="width:150px;">
+                                                        <option></option>
+                                                    </select>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td align="right">รหัสอ้างอิง</td>
+                                                <td align="left">
+                                                    <select style="width:150px;">
+                                                        <option></option>
+                                                    </select>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td align="left">
+                                                    <input type="button" value="คำนวณ" />
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-6">
+                                <div class="card mb-4">
+                                    <div class="card-header">
+                                        <i class="fas fa-chart-bar me-1"></i>
+                                        เลือกงวดที่ต้องการคำนวณค่าสอน
+                                    </div>
+                                    <div class="card-body">
+                                        <table cellpadding="10" cellspacing="">
+                                            <tr>
+                                                <td><input type="radio"/></td>
+                                                <td>งวดปกติ</td>
+                                                <td>
+                                                    <select style="width:150px;">
+                                                        <option></option>
+                                                    </select>
+                                                </td>
+                                                <td>เดือน-ปี</td>
+                                                <td>
+                                                    <select style="width:100px;">
+                                                        <option></option>
+                                                        <option>1</option>
+                                                        <option>2</option>
+                                                        <option>3</option>
+                                                        <option>4</option>
+                                                        <option>5</option>
+                                                        <option>6</option>
+                                                        <option>7</option>
+                                                        <option>8</option>
+                                                        <option>9</option>
+                                                        <option>10</option>
+                                                        <option>11</option>
+                                                        <option>12</option>                                                        
+                                                    </select>
+                                                </td>
+                                                <td>
+                                                    <select style="width:100px;">
+                                                        <option>2557</option>
+                                                        <option>2558</option>
+                                                        <option>2559</option>
+                                                        <option>2560</option>
+                                                        <option>2561</option>
+                                                        <option>2562</option>
+                                                        <option>2563</option>
+                                                        <option>2564</option>
+                                                        <option>2565</option>
+                                                        <option>2566</option>
+                                                        <option>2567</option>
+                                                        <option>2568</option>
+                                                        <option>2569</option>
+                                                    </select>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><input type="radio"/></td>
+                                                <td>งวดพิเศษ</td>
+                                                <td>
+                                                    <select style="width:150px;">
+                                                        <option></option>
+                                                    </select>
+                                                </td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td></td>
+                                                <td><input type="button" value="ส่งระบบเงินเดือน"/></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td>รวม</td>
+                                                <td><input type="text" style="width:150px;"/></td>
+                                                <td></td>
+                                                <td><input type="text" style="width:100px;"/></td>
+                                                <td></td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card mb-4">
+                            <div class="card-header">
+                                <i class="fas fa-table me-1"></i>
+                                <!--DataTable Example-->
+                            </div>
+                            <div class="card-body">
+                                <table id="datatablesSimple">
+                                    <thead>                                    
+                                        <tr>
+                                            <th>ลำดับ</th>
+                                            <th>&nbsp;</th>
+                                            <th>สถานะ</th>
+                                            <th>รหัสพนักงาน</th>
+                                            <th>ชื่อ - สกุล</th>
+                                            <th>รหัสวิชา</th>
+                                            <th>อัตรา</th>
+                                            <th>RATE</th>
+                                            <th>WL</th>
+                                            <th>EL</th>
+                                            <th>SG</th>
+                                            <th>ST</th>
+                                            <th>Total</th>
+                                            <th>ค่าสอน</th>
+                                            <th>กล้วยน้ำไท</th>
+                                            <th>รังสิต</th>
+                                            <th>ค่าเดินทาง</th>
+                                        </tr>
+                                    </thead>
+                                     
+                                    <tbody>
+                                         
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+                <footer class="py-4 bg-light mt-auto">
+                    <div class="container-fluid px-4">
+                        <div class="d-flex align-items-center justify-content-between small">
+                            <div class="text-muted">Copyright &copy; Your Website 2023</div>
+                            <div>
+                                <a href="#">Privacy Policy</a>
+                                &middot;
+                                <a href="#">Terms &amp; Conditions</a>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+        <script src="js/scripts.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
+        <script src="assets/demo/chart-area-demo.js"></script>
+        <script src="assets/demo/chart-bar-demo.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/umd/simple-datatables.min.js" crossorigin="anonymous"></script>
+        <script src="js/datatables-simple-demo.js"></script>
+    </body>
+</html>
